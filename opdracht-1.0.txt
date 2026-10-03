@@ -20,6 +20,12 @@ id (integer, primaire sleutel)
 name (varchar)
 address (varchar)
 
+CREATE TABLE OWNERS(
+    id INT PRIMARY KEY, 
+    Name VARCHAR (255), 
+    Address VARCHAR (255)
+);
+
 Voeg gegevens in de owners tabel. Voeg minimaal 3 rijen toe.
 INSERT INTO owners (name, address) VALUES
     ('lisa', 'Laan 1'),
