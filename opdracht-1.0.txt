@@ -1,0 +1,42 @@
+
+-- Database: db_les
+
+-- DROP DATABASE IF EXISTS db_les;
+
+CREATE DATABASE db_les
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'nl_NL.UTF-8'
+    LC_CTYPE = 'nl_NL.UTF-8'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+Maak een tabel aan genaamd owners met de volgende kolommen:
+
+id (integer, primaire sleutel)
+name (varchar)
+address (varchar)
+
+Voeg gegevens in de owners tabel. Voeg minimaal 3 rijen toe.
+INSERT INTO owners (name, address) VALUES
+    ('lisa', 'Laan 1'),
+    ('bob', 'Laan 2'),
+    ('jan', 'Laan 3');
+
+Selecteer alle gegevens uit de owners tabel.
+SELECT * FROM public.owners
+ORDER BY id ASC
+
+Update het adres van één eigenaar.
+UPDATE owners SET address = 'Laan 4' WHERE name = 'jan';
+
+Verwijder een eigenaar uit de tabel
+DELETE FROM owners WHERE id = 1;
+
+
+
+
+
